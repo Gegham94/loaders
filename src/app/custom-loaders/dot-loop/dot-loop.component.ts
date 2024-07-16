@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-loop',
   standalone: true,
   imports: [],
-  templateUrl: './loop.component.html',
-  styleUrl: './loop.component.scss'
+  templateUrl: './dot-loop.component.html',
+  styleUrl: './dot-loop.component.scss'
 })
-export class LoopComponent {
+export class DotLoopComponent {
 }
