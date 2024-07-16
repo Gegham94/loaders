@@ -1,0 +1,22 @@
+.buttons-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgba(163, 163, 163, 0.878);
+  gap: 10px;
+  width: 100%;
+  height: 10%;
+  padding: 10px;
+  button {
+    color: #fdd243;
+  }
+}
+.loaders-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+  padding: 10px;
+  background: linear-gradient(to right, #252626 0%, #373a3d 100%);
+}
