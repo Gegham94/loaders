@@ -15,6 +15,7 @@ import { BallsComponent } from './custom-loaders/balls/balls.component';
 import { LoadingComponent } from './custom-loaders/loading/loading.component';
 import { SquarsComponent } from './custom-loaders/squars/squars.component';
 import { MarioComponent } from './custom-loaders/mario/mario.component';
+import { DotsFlipComponent } from './custom-loaders/dots-flip/dots-flip.component';
 
 export const routes: Routes = [
   {
@@ -84,6 +85,10 @@ export const routes: Routes = [
   {
     path: 'mario',
     component: MarioComponent,
+  },
+  {
+    path: 'dots_flip',
+    component: DotsFlipComponent,
   },
   { path: '**', redirectTo: 'diamond' },
 ];
