@@ -2,16 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
+  width: 90px;
 }
 
 .loader div {
-  width: 15px;
-  height: 15px;
+  width: 9px;
+  height: 9px;
   margin: 0 5px;
   background-color: #DCB567;
   border-radius: 50%;
-  animation: loader 1.2s infinite ease-in-out both;
+  animation: loader 1s infinite ease-in-out both;
 }
 
 .loader div:nth-child(1) {

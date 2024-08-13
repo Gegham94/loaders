@@ -1,0 +1,21 @@
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 22px;
+  background: radial-gradient(circle closest-side,#DCB567 94%, transparent) right/calc(200% - 1em) 100%;
+  animation: l24 0.8s infinite alternate linear;
+}
+.loader::before {
+  content: "Loading...";
+  line-height: 1.2em;
+  color: transparent;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side,#000 94%,#DCB567);
+  background-clip:text;
+  -webkit-background-clip:text;
+}
+
+@keyframes l24{
+  100%{background-position: left}
+}

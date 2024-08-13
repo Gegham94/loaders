@@ -1,0 +1,27 @@
+.triangle-star-loader {
+  width: 50px;
+  aspect-ratio: 1.154;
+  display: grid;
+  color: #DCB567;
+  background:
+    linear-gradient(to bottom left ,transparent calc(50% - 1px),currentColor 0 calc(50% + 1px), transparent 0) right/50% 100%,
+    linear-gradient(to bottom right, transparent calc(50% - 1px),currentColor 0 calc(50% + 1px), transparent 0) left /50% 100%,
+    linear-gradient(currentColor 0 0) bottom/100% 2px;
+  background-repeat: no-repeat;
+  transform-origin: 50% 66%;
+  animation: l5 3s infinite linear;
+}
+.triangle-star-loader::before,
+.triangle-star-loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  transform-origin: inherit;
+  animation: inherit;
+}
+.triangle-star-loader::after {
+  animation-duration: 1.5s;
+}
+@keyframes l5{
+  100% {transform:rotate(1turn)}
+}

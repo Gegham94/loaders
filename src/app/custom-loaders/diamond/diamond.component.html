@@ -1,27 +1,16 @@
 <div class="content">
   <div class="wrapper">
-    <svg width="200" height="200" viewBox="0 0 200 200" color="#e7b018">
+    <svg width="200" height="200" viewBox="0 0 200 200">
       <defs>
-        <linearGradient id="spinner-secondHalf">
-          <stop offset="0%" stop-opacity="1" stop-color="#e7b018" />
-          <stop offset="100%" stop-opacity="0" stop-color="#e7b018" />
-        </linearGradient>
-        <linearGradient id="spinner-firstHalf">
-          <stop offset="100%" stop-opacity="1" stop-color="#e7b018" />
+        <linearGradient id="spinner">
+          <stop offset="0%" stop-opacity="1" stop-color="#DCB567" />
+          <stop offset="50%" stop-opacity="1" stop-color="#DCB567" />
+          <stop offset="100%" stop-opacity="0" stop-color="#DCB567" />
         </linearGradient>
       </defs>
 
-      <g stroke-width="8">
-        <path
-          fill="url(#spinner-secondHalf)"
-          d="M 4 200 A 96 96 0 0 1 196 200"
-        />
-        <path
-          fill="url(#spinner-firstHalf)"
-          d="M 196 200 A 96 96 0 0 1 4 200"
-        />
-
-        <path fill="#e7b018" d="M 4 100 A 96 96 0 0 1 4 98" />
+      <g>
+        <path fill="url(#spinner)" d="M 4 200 A 96 96 0 0 1 196 200" />
       </g>
 
       <animateTransform
@@ -35,6 +24,5 @@
     </svg>
   </div>
 
-  <span class="f"></span>
-  <span class="dot"></span>
+  <span class="d">D</span>
 </div>

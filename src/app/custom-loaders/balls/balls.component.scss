@@ -1,0 +1,36 @@
+.balls-loader {
+  width:28px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ffd54a;
+  animation: l9 2s infinite;
+}
+@keyframes l9 {
+  0%   {box-shadow: 
+    0 -16px #b8871e, calc(16px*0.707) calc(-16px*0.707) #b8871e,0 0 #b8871e, 0 0 #b8871e,
+    0 0 #b8871e, 0 0 #b8871e,0 0 #d69d23, 0 0 #b8871e}
+  12.5%   {box-shadow: 
+    0 0 #DCB567, calc(16px*0.707) calc(-16px*0.707) #b8871e,16px 0 #DCB567, 0 0 #b8871e,
+    0 0 #DCB567, 0 0 #b8871e,0 0 #DCB567, 0 0 #b8871e}
+  25%   {box-shadow: 
+    0 0 #DCB567, 0 0 #b8871e,16px 0 #DCB567, calc(16px*0.707) calc(16px*0.707) #b8871e,
+    0 0 #DCB567, 0 0 #b8871e,0 0 #DCB567, 0 0 #b8871e}
+  37.5% {box-shadow: 
+    0 0 #DCB567, 0 0 #b8871e,0 0 #DCB567, calc(16px*0.707) calc(16px*0.707) #b8871e,
+    0 16px #DCB567, 0 0 #b8871e,0 0 #DCB567, 0 0 #b8871e}
+  50%   {box-shadow: 
+    0 0 #DCB567, 0 0 #b8871e,0 0 #DCB567, 0 0 #b8871e,
+    0 16px #DCB567, calc(-16px*0.707) calc(16px*0.707) #b8871e,0 0 #DCB567, 0 0 #b8871e}
+  62.5% {box-shadow: 
+    0 0 #DCB567, 0 0 #b8871e,0 0 #DCB567, 0 0 #b8871e,
+    0 0 #DCB567, calc(-16px*0.707) calc(16px*0.707) #b8871e,-16px 0 #DCB567, 0 0 #b8871e}
+  75%   {box-shadow: 
+    0 0 #DCB567, 0 0 #b8871e,0 0 #DCB567, 0 0 #b8871e,
+    0 0 #DCB567, 0 0 #b8871e,-16px 0 #DCB567, calc(-16px*0.707) calc(-16px*0.707) #b8871e}
+  87.5% {box-shadow: 
+    0 -16px #DCB567, 0 0 #b8871e,0 0 #DCB567, 0 0 #b8871e,
+    0 0 #DCB567, 0 0 #b8871e,0 0 #DCB567, calc(-16px*0.707) calc(-16px*0.707) #b8871e}
+  100% {box-shadow: 
+    0 -16px #DCB567, calc(16px*0.707) calc(-16px*0.707) #b8871e,0 0 #DCB567, 0 0 #b8871e,
+    0 0 #DCB567, 0 0 #b8871e,0 0 #DCB567, 0 0 #b8871e}
+}
