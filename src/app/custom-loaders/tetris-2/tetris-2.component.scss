@@ -1,7 +1,7 @@
 .tetris-2-loader {
   width: 60px;
   height: 14px;
-  box-shadow: 0 3px 0 #DCB567;
+  box-shadow: 0 3px 0 #e1a52f;
   position: relative;
   clip-path: inset(-40px 0 -5px)
 }
@@ -10,7 +10,7 @@
   position: absolute;
   inset: auto calc(50% - 16px) 0;
   height: 50px;
-  --g:no-repeat linear-gradient(#DCB567 0 0);
+  --g:no-repeat linear-gradient(#e1a52f 0 0);
   background: var(--g),var(--g),var(--g),var(--g);
   background-size: 15px 13px;
   animation:

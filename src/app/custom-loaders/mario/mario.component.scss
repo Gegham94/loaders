@@ -5,7 +5,7 @@
   line-height: 1.4;
   font-weight: bold;
   padding: 30px 2px 50px;
-  background: linear-gradient(#DCB567 0 0) 0 0/100% 100% content-box padding-box no-repeat; 
+  background: linear-gradient(#e1a52f 0 0) 0 0/100% 100% content-box padding-box no-repeat; 
   position: relative;
   overflow: hidden;
   animation: l10-0 1.3s infinite cubic-bezier(1,175,.5,175);
@@ -14,7 +14,7 @@
   content:"Loading";
   display:inline-block;
   animation: l10-2 1.3s infinite;
-  color: #DCB567;
+  color: #e1a52f;
 }
 .mario-loader::after {
   content:"";

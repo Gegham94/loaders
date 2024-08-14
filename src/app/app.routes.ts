@@ -16,6 +16,10 @@ import { LoadingComponent } from './custom-loaders/loading/loading.component';
 import { SquarsComponent } from './custom-loaders/squars/squars.component';
 import { MarioComponent } from './custom-loaders/mario/mario.component';
 import { DotsFlipComponent } from './custom-loaders/dots-flip/dots-flip.component';
+import { CubeFlipComponent } from './custom-loaders/cube-flip/cube-flip.component';
+import { DotSlideComponent } from './custom-loaders/dot-slide/dot-slide.component';
+import { OvalsFlipComponent } from './custom-loaders/ovals-flip/ovals-flip.component';
+import { TimeComponent } from './custom-loaders/time/time.component';
 
 export const routes: Routes = [
   {
@@ -89,6 +93,22 @@ export const routes: Routes = [
   {
     path: 'dots_flip',
     component: DotsFlipComponent,
+  },
+  {
+    path: 'cube_flip',
+    component: CubeFlipComponent,
+  },
+  {
+    path: 'dot_slide',
+    component: DotSlideComponent,
+  },
+  {
+    path: 'ovals_flip',
+    component: OvalsFlipComponent,
+  },
+  {
+    path: 'time',
+    component: TimeComponent,
   },
   { path: '**', redirectTo: 'diamond' },
 ];
