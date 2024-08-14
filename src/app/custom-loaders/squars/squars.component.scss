@@ -14,8 +14,8 @@
     var(--c) 100% 100%,
     var(--c) 0 100%;
   animation: 
-    l10-1 2s infinite linear,
-    l10-2 2s infinite linear;
+    l10-1 1.5s infinite linear,
+    l10-2 1.5s infinite linear;
 }
 .squar-loader::after {
   margin: 25%;

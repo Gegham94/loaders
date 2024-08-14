@@ -13,7 +13,7 @@
     background: rgb(222, 222, 222);
     gap: 10px;
     width: 100%;
-    padding: 10px;
+    padding: 10px 85px;
     button {
       color: #e1a52f;
       &.active {
@@ -29,5 +29,13 @@
     flex: 10;
     width: 100%;
     background: linear-gradient(to right, #515252 0%, #2b2c2d 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    .buttons-content {
+      padding: 5px 15px;
+    }
   }
 }

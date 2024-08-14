@@ -20,6 +20,7 @@ import { CubeFlipComponent } from './custom-loaders/cube-flip/cube-flip.componen
 import { DotSlideComponent } from './custom-loaders/dot-slide/dot-slide.component';
 import { OvalsFlipComponent } from './custom-loaders/ovals-flip/ovals-flip.component';
 import { TimeComponent } from './custom-loaders/time/time.component';
+import { LinesComponent } from './custom-loaders/lines/lines.component';
 
 export const routes: Routes = [
   {
@@ -109,6 +110,10 @@ export const routes: Routes = [
   {
     path: 'time',
     component: TimeComponent,
+  },
+  {
+    path: 'lines',
+    component: LinesComponent,
   },
   { path: '**', redirectTo: 'diamond' },
 ];
