@@ -2,8 +2,10 @@
   <div class="buttons-content">
     <button mat-raised-button routerLink="diamond" (click)="setActive('diamond')" [class.active]="activeButton === 'diamond'">Diamond</button>
     <button mat-raised-button routerLink="gear" (click)="setActive('gear')" [class.active]="activeButton === 'gear'">Gear</button>
+    <button mat-raised-button routerLink="mario" (click)="setActive('mario')" [class.active]="activeButton === 'mario'">Mario</button>
     <button mat-raised-button routerLink="dot_loop" (click)="setActive('dot_loop')" [class.active]="activeButton === 'dot_loop'">Loop</button>
     <button mat-raised-button routerLink="dash_loop" (click)="setActive('dash_loop')" [class.active]="activeButton === 'dash_loop'">Dash Loop</button>
+    <button mat-raised-button routerLink="blob_loop" (click)="setActive('blob_loop')" [class.active]="activeButton === 'blob_loop'">Blob Loop</button>
     <button mat-raised-button routerLink="circule_way" (click)="setActive('circule_way')" [class.active]="activeButton === 'circule_way'">Circule Way</button>
     <button mat-raised-button routerLink="triangle_star" (click)="setActive('triangle_star')" [class.active]="activeButton === 'triangle_star'">Triangle Star</button>
     <button mat-raised-button routerLink="ovals_flip" (click)="setActive('ovals_flip')" [class.active]="activeButton === 'ovals_flip'">Ovals Flip</button>
@@ -21,7 +23,6 @@
     <button mat-raised-button routerLink="loading" (click)="setActive('loading')" [class.active]="activeButton === 'loading'">Loading</button>
     <button mat-raised-button routerLink="squars" (click)="setActive('squars')" [class.active]="activeButton === 'squars'">Squars</button>
     <button mat-raised-button routerLink="lines" (click)="setActive('lines')" [class.active]="activeButton === 'lines'">Lines</button>
-    <button mat-raised-button routerLink="mario" (click)="setActive('mario')" [class.active]="activeButton === 'mario'">Mario</button>
   </div>
   <div class="loaders-content">
     <router-outlet />

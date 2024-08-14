@@ -21,6 +21,7 @@ import { DotSlideComponent } from './custom-loaders/dot-slide/dot-slide.componen
 import { OvalsFlipComponent } from './custom-loaders/ovals-flip/ovals-flip.component';
 import { TimeComponent } from './custom-loaders/time/time.component';
 import { LinesComponent } from './custom-loaders/lines/lines.component';
+import { BlobLoopComponent } from './custom-loaders/blob-loop/blob-loop.component';
 
 export const routes: Routes = [
   {
@@ -114,6 +115,10 @@ export const routes: Routes = [
   {
     path: 'lines',
     component: LinesComponent,
+  },
+  {
+    path: 'blob_loop',
+    component: BlobLoopComponent,
   },
   { path: '**', redirectTo: 'diamond' },
 ];

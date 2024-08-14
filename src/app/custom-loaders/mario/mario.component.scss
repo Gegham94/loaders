@@ -50,7 +50,18 @@
 @keyframes l10-1{
   50%,100% { top:109.5% };
 }
-@keyframes l10-2{
-  0%,30%   { transform:translateY(0); }
-  80%,100% { transform:translateY(-150%); }
+
+@keyframes l10-2 {
+  0%, 30% { 
+    transform: translateY(0);
+    color: #e1a52f;
+  }
+  40% {
+    transform: translateY(-30%);
+    color: #e1a52f;
+  }
+  80%, 100% { 
+    transform: translateY(-150%);
+    color: #f92033;
+  }
 }
