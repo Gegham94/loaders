@@ -22,6 +22,7 @@ import { OvalsFlipComponent } from './custom-loaders/ovals-flip/ovals-flip.compo
 import { TimeComponent } from './custom-loaders/time/time.component';
 import { LinesComponent } from './custom-loaders/lines/lines.component';
 import { BlobLoopComponent } from './custom-loaders/blob-loop/blob-loop.component';
+import { BlobCubeComponent } from './custom-loaders/blob-cube/blob-cube.component';
 
 export const routes: Routes = [
   {
@@ -119,6 +120,10 @@ export const routes: Routes = [
   {
     path: 'blob_loop',
     component: BlobLoopComponent,
+  },
+  {
+    path: 'blob_cube',
+    component: BlobCubeComponent,
   },
   { path: '**', redirectTo: 'diamond' },
 ];
