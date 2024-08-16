@@ -1,13 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  RouterModule,
-  RouterOutlet,
-  Router,
-  NavigationEnd,
-} from '@angular/router';
+import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { RouterModule, RouterOutlet, Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
-import { filter } from 'rxjs/operators';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
@@ -18,35 +12,37 @@ import { DeviceDetectorService } from 'ngx-device-detector';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
+  @ViewChildren('elementItemRef') elementItemRef!: QueryList<any>;
   title = 'loaders';
   activeButton: string = 'diamond';
   isMobile: boolean = false;
   dropdownOpen: boolean = false;
+  selectedItemId: number = 0;
   loaders = [
-    { title: 'Diamond', value: 'diamond' },
-    { title: 'Gear', value: 'gear' },
-    { title: 'Mario', value: 'mario' },
-    { title: 'Loop', value: 'dot_loop' },
-    { title: 'Dash Loop', value: 'dash_loop' },
-    { title: 'Blob Loop', value: 'blob_loop' },
-    { title: 'Circule Way', value: 'circule_way' },
-    { title: 'Triangle Star', value: 'triangle_star' },
-    { title: 'Ovals Flip', value: 'ovals_flip' },
-    { title: 'Dots Flip', value: 'dots_flip' },
-    { title: 'Balls', value: 'balls' },
-    { title: 'Dot Flash', value: 'dot_flash' },
-    { title: 'Dot Slide', value: 'dot_slide' },
-    { title: 'Tik Tok', value: 'tik_tok' },
-    { title: 'Tetris', value: 'tetris' },
-    { title: 'Tetris 2', value: 'tetris_2' },
-    { title: 'Cube Flip', value: 'cube_flip' },
-    { title: 'Blob Cube', value: 'blob_cube' },
-    { title: 'Time', value: 'time' },
-    { title: 'Falling Blocks', value: 'falling_blocks' },
-    { title: 'Jumper', value: 'jumper' },
-    { title: 'Loading', value: 'loading' },
-    { title: 'Squars', value: 'squars' },
-    { title: 'Lines', value: 'lines' },
+    { id: 0, title: 'Diamond', value: 'diamond' },
+    { id: 1, title: 'Gear', value: 'gear' },
+    { id: 2, title: 'Mario', value: 'mario' },
+    { id: 3, title: 'Loop', value: 'dot_loop' },
+    { id: 4, title: 'Dash Loop', value: 'dash_loop' },
+    { id: 5, title: 'Blob Loop', value: 'blob_loop' },
+    { id: 6, title: 'Circule Way', value: 'circule_way' },
+    { id: 7, title: 'Triangle Star', value: 'triangle_star' },
+    { id: 8, title: 'Ovals Flip', value: 'ovals_flip' },
+    { id: 9, title: 'Dots Flip', value: 'dots_flip' },
+    { id: 10, title: 'Balls', value: 'balls' },
+    { id: 11, title: 'Dot Flash', value: 'dot_flash' },
+    { id: 12, title: 'Dot Slide', value: 'dot_slide' },
+    { id: 13, title: 'Tik Tok', value: 'tik_tok' },
+    { id: 14, title: 'Tetris', value: 'tetris' },
+    { id: 15, title: 'Tetris 2', value: 'tetris_2' },
+    { id: 16, title: 'Cube Flip', value: 'cube_flip' },
+    { id: 17, title: 'Blob Cube', value: 'blob_cube' },
+    { id: 18, title: 'Time', value: 'time' },
+    { id: 19, title: 'Falling Blocks', value: 'falling_blocks' },
+    { id: 20, title: 'Jumper', value: 'jumper' },
+    { id: 21, title: 'Loading', value: 'loading' },
+    { id: 22, title: 'Squars', value: 'squars' },
+    { id: 23, title: 'Lines', value: 'lines' },
   ];
 
   constructor(
@@ -55,28 +51,26 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log(this.deviceService.deviceType);
     this.isMobile = this.deviceService.deviceType === 'mobile' ? true : false;
-    this.setActiveFromUrl(this.router.url);
-
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        this.setActiveFromUrl(this.router.url);
-      });
+    this.activeButton = 'diamond';
+    this.router.navigate(['diamond']);
   }
 
-  setActive(route: string) {
-    this.activeButton = route;
+  setActive(value: string, id?: number) {
+    this.activeButton = value;
     this.dropdownOpen = false;
+    this.selectedItemId = id ? id : 1;
   }
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
-  }
-
-  private setActiveFromUrl(url: string) {
-    const route = url.split('/').pop() || 'diamond';
-    this.setActive(route);
+    setTimeout(() => {
+      const elements = this.elementItemRef.toArray();
+      const selectedElementItem = elements[this.selectedItemId].nativeElement;
+      selectedElementItem.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'start',
+      });
+    });
   }
 }

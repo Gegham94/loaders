@@ -4,7 +4,7 @@
       <button
         mat-raised-button
         [routerLink]="loader.value"
-        (click)="setActive(loader.value)"
+        (click)="setActive(loader.value, loader.id)"
         [class.active]="activeButton === loader.value"
       >
         {{ loader.title }}
@@ -30,9 +30,10 @@
       <div class="dropdown-list" [class.open]="dropdownOpen">
         <ng-container *ngFor="let loader of loaders">
           <span
+            #elementItemRef
             class="item"
             [routerLink]="loader.value"
-            (click)="setActive(loader.value)"
+            (click)="setActive(loader.value, loader.id)"
             [class.active]="activeButton === loader.value"
           >
             {{ loader.title }}
