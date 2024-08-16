@@ -1,26 +1,28 @@
 .dot-slide-loader {
-  width: 90px;
-  height: 23px;
-  border-radius: 40px;
-  color: #e1a52f;
-  border: 2px solid;
-  position: relative;
-  overflow: hidden;
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  clip-path: inset(-45px);
+  box-shadow: -60px 15px #f03355, -60px 15px #f03355, -60px 15px #f03355;
+  animation: l19 1s infinite linear;
 }
-.dot-slide-loader::before {
-  content: "";
-  position: absolute;
-  margin: 2px;
-  width: 14px;
-  top: 0;
-  bottom: 0;
-  left: -20px;
-  border-radius: inherit;
-  background: #f03355 ;
-  box-shadow: -10px 0 12px 3px #f03355 ;
-  clip-path: polygon(0 5%, 100% 0,100% 100%,0 95%,-30px 50%);
-  animation: l14 0.7s infinite linear;
-}
-@keyframes l14 {
-  100% {left: calc(100% + 20px)}
+@keyframes l19 {
+  16.67% {
+    box-shadow: -60px 15px #f03355, -60px 15px #f03355, 19px 15px #f03355;
+  }
+  33.33% {
+    box-shadow: -60px 15px #e1a52f, 0px 15px #e1a52f, 19px 15px #e1a52f;
+  }
+  40%,60% {
+    box-shadow: -19px 15px #e1a52f, 0px 15px #e1a52f, 19px 15px #e1a52f;
+  }
+  66.67% {
+    box-shadow: -19px 15px #e1a52f, 0px 15px #e1a52f, 60px 15px #e1a52f;
+  }
+  83.33% {
+    box-shadow: -19px 15px #e1a52f, 60px 15px #e1a52f, 60px 15px #e1a52f;
+  }
+  100% {
+    box-shadow: 60px 15px #f03355, 60px 15px #f03355, 60px 15px #f03355;
+  }
 }

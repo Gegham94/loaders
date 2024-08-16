@@ -17,12 +17,13 @@ import { SquarsComponent } from './custom-loaders/squars/squars.component';
 import { MarioComponent } from './custom-loaders/mario/mario.component';
 import { DotsFlipComponent } from './custom-loaders/dots-flip/dots-flip.component';
 import { CubeFlipComponent } from './custom-loaders/cube-flip/cube-flip.component';
-import { DotSlideComponent } from './custom-loaders/dot-slide/dot-slide.component';
+import { DotLoadComponent } from './custom-loaders/dot-load/dot-load.component';
 import { OvalsFlipComponent } from './custom-loaders/ovals-flip/ovals-flip.component';
 import { TimeComponent } from './custom-loaders/time/time.component';
 import { LinesComponent } from './custom-loaders/lines/lines.component';
 import { BlobLoopComponent } from './custom-loaders/blob-loop/blob-loop.component';
 import { BlobCubeComponent } from './custom-loaders/blob-cube/blob-cube.component';
+import { DotSlideComponent } from './custom-loaders/dot-slide/dot-slide.component';
 
 export const routes: Routes = [
   {
@@ -100,6 +101,10 @@ export const routes: Routes = [
   {
     path: 'cube_flip',
     component: CubeFlipComponent,
+  },
+  {
+    path: 'dot_load',
+    component: DotLoadComponent,
   },
   {
     path: 'dot_slide',

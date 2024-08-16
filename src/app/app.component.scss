@@ -24,7 +24,7 @@
 @media (max-width: 768px) {
   .content {
     justify-content: flex-end;
-    .loaders-content:not(.mobile) {
+    .loaders-content:not(.mobile){
       height: calc(100% - 12rem);
     }
   }
