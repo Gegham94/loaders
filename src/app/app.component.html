@@ -1,31 +1,48 @@
-<div class="content">
+<div class="content" *ngIf="!isMobile; else mobileModel">
   <div class="buttons-content">
-    <button mat-raised-button routerLink="diamond" (click)="setActive('diamond')" [class.active]="activeButton === 'diamond'">Diamond</button>
-    <button mat-raised-button routerLink="gear" (click)="setActive('gear')" [class.active]="activeButton === 'gear'">Gear</button>
-    <button mat-raised-button routerLink="mario" (click)="setActive('mario')" [class.active]="activeButton === 'mario'">Mario</button>
-    <button mat-raised-button routerLink="dot_loop" (click)="setActive('dot_loop')" [class.active]="activeButton === 'dot_loop'">Loop</button>
-    <button mat-raised-button routerLink="dash_loop" (click)="setActive('dash_loop')" [class.active]="activeButton === 'dash_loop'">Dash Loop</button>
-    <button mat-raised-button routerLink="blob_loop" (click)="setActive('blob_loop')" [class.active]="activeButton === 'blob_loop'">Blob Loop</button>
-    <button mat-raised-button routerLink="circule_way" (click)="setActive('circule_way')" [class.active]="activeButton === 'circule_way'">Circule Way</button>
-    <button mat-raised-button routerLink="triangle_star" (click)="setActive('triangle_star')" [class.active]="activeButton === 'triangle_star'">Triangle Star</button>
-    <button mat-raised-button routerLink="ovals_flip" (click)="setActive('ovals_flip')" [class.active]="activeButton === 'ovals_flip'">Ovals Flip</button>
-    <button mat-raised-button routerLink="dots_flip" (click)="setActive('dots_flip')" [class.active]="activeButton === 'dots_flip'">Dots Flip</button>
-    <button mat-raised-button routerLink="balls" (click)="setActive('balls')" [class.active]="activeButton === 'balls'">Balls</button>
-    <button mat-raised-button routerLink="dot_flash" (click)="setActive('dot_flash')" [class.active]="activeButton === 'dot_flash'">Dot Flash</button>
-    <button mat-raised-button routerLink="dot_slide" (click)="setActive('dot_slide')" [class.active]="activeButton === 'dot_slide'">Dot Slide</button>
-    <button mat-raised-button routerLink="tik_tok" (click)="setActive('tik_tok')" [class.active]="activeButton === 'tik_tok'">Tik Tok</button>
-    <button mat-raised-button routerLink="tetris" (click)="setActive('tetris')" [class.active]="activeButton === 'tetris'">Tetris</button>
-    <button mat-raised-button routerLink="tetris_2" (click)="setActive('tetris_2')" [class.active]="activeButton === 'tetris_2'">Tetris 2</button>
-    <button mat-raised-button routerLink="cube_flip" (click)="setActive('cube_flip')" [class.active]="activeButton === 'cube_flip'">Cube Flip</button>
-    <button mat-raised-button routerLink="blob_cube" (click)="setActive('blob_cube')" [class.active]="activeButton === 'blob_cube'">Blob Cube</button>
-    <button mat-raised-button routerLink="time" (click)="setActive('time')" [class.active]="activeButton === 'time'">Time</button>
-    <button mat-raised-button routerLink="falling_blocks" (click)="setActive('falling_blocks')" [class.active]="activeButton === 'falling_blocks'">Falling Blocks</button>
-    <button mat-raised-button routerLink="jumper" (click)="setActive('jumper')" [class.active]="activeButton === 'jumper'">Jumper</button>
-    <button mat-raised-button routerLink="loading" (click)="setActive('loading')" [class.active]="activeButton === 'loading'">Loading</button>
-    <button mat-raised-button routerLink="squars" (click)="setActive('squars')" [class.active]="activeButton === 'squars'">Squars</button>
-    <button mat-raised-button routerLink="lines" (click)="setActive('lines')" [class.active]="activeButton === 'lines'">Lines</button>
+    <ng-container *ngFor="let loader of loaders">
+      <button
+        mat-raised-button
+        [routerLink]="loader.value"
+        (click)="setActive(loader.value)"
+        [class.active]="activeButton === loader.value"
+      >
+        {{ loader.title }}
+      </button>
+    </ng-container>
   </div>
   <div class="loaders-content">
     <router-outlet />
-  </div>  
+  </div>
 </div>
+
+<ng-template #mobileModel>
+  <div class="content mobile">
+    <div class="dropdown-btn">
+      <div class="title" (click)="toggleDropdown()">
+        Loaders
+        <span
+          class="arrow"
+          [class.up]="dropdownOpen"
+          [class.down]="!dropdownOpen"
+        ></span>
+      </div>
+      <div class="dropdown-list" [class.open]="dropdownOpen">
+        <ng-container *ngFor="let loader of loaders">
+          <span
+            class="item"
+            [routerLink]="loader.value"
+            (click)="setActive(loader.value)"
+            [class.active]="activeButton === loader.value"
+          >
+            {{ loader.title }}
+          </span>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="loaders-content">
+      <router-outlet />
+    </div>
+  </div>
+</ng-template>
