@@ -1,0 +1,38 @@
+<div class="buttons-content" *ngIf="!isMobile; else mobileModel">
+  <ng-container *ngFor="let loader of loaders">
+    <button
+      mat-raised-button
+      [routerLink]="loader.value"
+      (click)="setActive(loader.value, loader.id)"
+      [class.active]="activeButton === loader.value"
+    >
+      {{ loader.title }}
+    </button>
+  </ng-container>
+</div>
+
+<ng-template #mobileModel>
+  <div class="mobile-dropdowns-content">
+    <div class="title" (click)="toggleDropdown()">
+      Loaders
+      <span
+        class="arrow"
+        [class.up]="dropdownOpen"
+        [class.down]="!dropdownOpen"
+      ></span>
+    </div>
+    <div class="dropdown-list" [class.open]="dropdownOpen">
+      <ng-container *ngFor="let loader of loaders">
+        <span
+          #elementItemRef
+          class="item"
+          [routerLink]="loader.value"
+          (click)="setActive(loader.value, loader.id)"
+          [class.active]="activeButton === loader.value"
+        >
+          {{ loader.title }}
+        </span>
+      </ng-container>
+    </div>
+  </div>
+</ng-template>
