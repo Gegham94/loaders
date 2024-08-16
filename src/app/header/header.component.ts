@@ -77,7 +77,7 @@ export class HeaderComponent {
     setTimeout(() => {
       const elements = this.elementItemRef.toArray();
       const selectedElementItem = elements[this.selectedItemId].nativeElement;
-      selectedElementItem.scrollIntoView({ behavior: "smooth", block: "center" });
+      selectedElementItem.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
 }
