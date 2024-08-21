@@ -3,8 +3,8 @@
     <button
       mat-raised-button
       [routerLink]="loader.value"
-      (click)="setActive(loader.value, loader.id)"
-      [class.active]="activeButton === loader.value"
+      routerLinkActive="active"
+      (click)="setActive(loader.id)"
     >
       {{ loader.title }}
     </button>
@@ -28,8 +28,8 @@
             #elementItemRef
             class="item"
             [routerLink]="loader.value"
-            (click)="setActive(loader.value, loader.id)"
-            [class.active]="activeButton === loader.value"
+            routerLinkActive="active"
+            (click)="setActive(loader.id)"
           >
             {{ loader.title }}
           </span>

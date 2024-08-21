@@ -1,9 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  Component,
-  QueryList,
-  ViewChildren,
-} from '@angular/core';
+import { Component, QueryList, ViewChildren } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { DeviceDetectorService } from 'ngx-device-detector';
@@ -17,13 +13,9 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 })
 export class HeaderComponent {
   @ViewChildren('elementItemRef') elementItemRef!: QueryList<any>;
-
   title = 'loaders';
-  activeButton: string = 'diamond';
-
   isMobile: boolean = false;
   dropdownOpen: boolean = false;
-
   selectedItemId: number = 0;
   loaders = [
     { id: 0, title: 'Diamond', value: 'diamond' },
@@ -40,17 +32,21 @@ export class HeaderComponent {
     { id: 11, title: 'Dot Flash', value: 'dot_flash' },
     { id: 12, title: 'Dot Load', value: 'dot_load' },
     { id: 13, title: 'Dot Slide', value: 'dot_slide' },
-    { id: 14, title: 'Tik Tok', value: 'tik_tok' },
-    { id: 15, title: 'Tetris', value: 'tetris' },
-    { id: 16, title: 'Tetris 2', value: 'tetris_2' },
-    { id: 17, title: 'Cube Flip', value: 'cube_flip' },
-    { id: 18, title: 'Blob Cube', value: 'blob_cube' },
-    { id: 19, title: 'Time', value: 'time' },
-    { id: 20, title: 'Falling Blocks', value: 'falling_blocks' },
-    { id: 21, title: 'Jumper', value: 'jumper' },
-    { id: 22, title: 'Loading', value: 'loading' },
-    { id: 23, title: 'Squars', value: 'squars' },
-    { id: 24, title: 'Lines', value: 'lines' },
+    { id: 14, title: 'Dot Cut', value: 'dot_cut' },
+    { id: 15, title: 'Dot Cut Rotate', value: 'dot_cut_rotate' },
+    { id: 16, title: 'Dot Rotate', value: 'dot_rotate' },
+    { id: 17, title: 'Dot Swell Up', value: 'dot_swell_up' },
+    { id: 18, title: 'Tik Tok', value: 'tik_tok' },
+    { id: 19, title: 'Tetris', value: 'tetris' },
+    { id: 20, title: 'Tetris 2', value: 'tetris_2' },
+    { id: 21, title: 'Cube Flip', value: 'cube_flip' },
+    { id: 22, title: 'Blob Cube', value: 'blob_cube' },
+    { id: 23, title: 'Time', value: 'time' },
+    { id: 24, title: 'Falling Blocks', value: 'falling_blocks' },
+    { id: 25, title: 'Jumper', value: 'jumper' },
+    { id: 26, title: 'Loading', value: 'loading' },
+    { id: 27, title: 'Squars', value: 'squars' },
+    { id: 28, title: 'Lines', value: 'lines' },
   ];
 
   constructor(
@@ -60,12 +56,10 @@ export class HeaderComponent {
 
   ngOnInit() {
     this.isMobile = this.deviceService.deviceType === 'mobile' ? true : false;
-    this.activeButton = 'diamond';
     this.router.navigate(['diamond']);
   }
 
-  setActive(value: string, id: number) {
-    this.activeButton = value;
+  setActive(id: number) {
     this.selectedItemId = id;
     setTimeout(() => {
       this.dropdownOpen = false;
@@ -77,7 +71,10 @@ export class HeaderComponent {
     setTimeout(() => {
       const elements = this.elementItemRef.toArray();
       const selectedElementItem = elements[this.selectedItemId].nativeElement;
-      selectedElementItem.scrollIntoView({ behavior: "smooth", block: "start" });
+      selectedElementItem.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
     });
   }
 }

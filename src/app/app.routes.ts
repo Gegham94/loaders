@@ -24,6 +24,10 @@ import { LinesComponent } from './custom-loaders/lines/lines.component';
 import { BlobLoopComponent } from './custom-loaders/blob-loop/blob-loop.component';
 import { BlobCubeComponent } from './custom-loaders/blob-cube/blob-cube.component';
 import { DotSlideComponent } from './custom-loaders/dot-slide/dot-slide.component';
+import { DotCutComponent } from './custom-loaders/dot-cut/dot-cut.component';
+import { DotCutRotateComponent } from './custom-loaders/dot-cut-rotate/dot-cut-rotate.component';
+import { DotRotateComponent } from './custom-loaders/dot-rotate/dot-rotate.component';
+import { DotSwellUpComponent } from './custom-loaders/dot-swell-up/dot-swell-up.component';
 
 export const routes: Routes = [
   {
@@ -129,6 +133,22 @@ export const routes: Routes = [
   {
     path: 'blob_cube',
     component: BlobCubeComponent,
+  },
+  {
+    path: 'dot_cut',
+    component: DotCutComponent,
+  },
+  {
+    path: 'dot_cut_rotate',
+    component: DotCutRotateComponent,
+  },
+  {
+    path: 'dot_rotate',
+    component: DotRotateComponent,
+  },
+  {
+    path: 'dot_swell_up',
+    component: DotSwellUpComponent,
   },
   { path: '**', redirectTo: 'diamond' },
 ];
