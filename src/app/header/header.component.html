@@ -22,19 +22,17 @@
       ></span>
     </div>
     <div class="dropdown-list" [class.open]="dropdownOpen">
-      <div class="list-wrapper">
-        <ng-container *ngFor="let loader of loaders">
-          <span
-            #elementItemRef
-            class="item"
-            [routerLink]="loader.value"
-            routerLinkActive="active"
-            (click)="setActive(loader.id)"
-          >
-            {{ loader.title }}
-          </span>
-        </ng-container>
-      </div>
+      <ng-container *ngFor="let loader of loaders">
+        <span
+          #elementItemRef
+          class="item"
+          [routerLink]="loader.value"
+          routerLinkActive="active"
+          (click)="setActive(loader.id)"
+        >
+          {{ loader.title }}
+        </span>
+      </ng-container>
     </div>
   </div>
 </ng-template>

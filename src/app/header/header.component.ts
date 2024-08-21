@@ -63,18 +63,20 @@ export class HeaderComponent {
     this.selectedItemId = id;
     setTimeout(() => {
       this.dropdownOpen = false;
-    }, 300);
+    }, 200);
   }
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
-    setTimeout(() => {
-      const elements = this.elementItemRef.toArray();
-      const selectedElementItem = elements[this.selectedItemId].nativeElement;
-      selectedElementItem.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+    if(this.dropdownOpen) {
+      setTimeout(() => {
+        const elements = this.elementItemRef.toArray();
+        const selectedElementItem = elements[this.selectedItemId].nativeElement;
+        selectedElementItem.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
       });
-    });
+    }
   }
 }
