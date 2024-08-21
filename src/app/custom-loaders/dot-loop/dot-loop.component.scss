@@ -1,4 +1,4 @@
-.loader {
+.dot-loop-loader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,8 +22,6 @@
     &:nth-child(8) { top: 14%; left: 14%; animation-delay: -0.5s; }
   }
 }
-
-
 
 @keyframes loader-animation {
   0%, 20%, 80%, 100% {

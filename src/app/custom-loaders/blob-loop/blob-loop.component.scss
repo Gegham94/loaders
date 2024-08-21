@@ -1,4 +1,4 @@
-.loader {
+.blob-loop-loader {
   width: 50px;
   aspect-ratio: 1;
   display: grid;
@@ -7,15 +7,15 @@
   border-color: #e1a52f transparent;
   animation: l16 1s infinite linear;
 }
-.loader::before,
-.loader::after {    
+.blob-loop-loader::before,
+.blob-loop-loader::after {    
   content: "";
   grid-area: 1/1;
   margin: 2px;
   border: inherit;
   border-radius: 50%;
 }
-.loader::before {
+.blob-loop-loader::before {
   border-color: #f03355 transparent;
   animation: inherit; 
   animation-duration: .5s;

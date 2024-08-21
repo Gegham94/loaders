@@ -1,4 +1,4 @@
-.loader {
+.dot-rotate-loader {
   width: 17px;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -6,8 +6,8 @@
   display: grid;
   animation: l22-0 2s infinite linear;
 }
-.loader:before,
-.loader:after {
+.dot-rotate-loader:before,
+.dot-rotate-loader:after {
   content: "";
   grid-area: 1/1;
   margin: 15%;
@@ -16,7 +16,7 @@
   transform: rotate(0deg) translate(150%);
   animation: l22 1s infinite;
 }
-.loader:after {
+.dot-rotate-loader:after {
   animation-delay: -.5s
 }
 @keyframes l22-0 {

@@ -1,4 +1,4 @@
-.loader {
+.loading-loader {
   width: fit-content;
   font-weight: bold;
   font-family: monospace;
@@ -6,7 +6,7 @@
   background: radial-gradient(circle closest-side,#e1a52f 94%, transparent) right/calc(200% - 1em) 100%;
   animation: l24 0.8s infinite alternate linear;
 }
-.loader::before {
+.loading-loader::before {
   content: "Loading...";
   line-height: 1.2em;
   color: transparent;

@@ -1,10 +1,10 @@
-.loader {
+.dot-cut-rotate-loader {
   height: 15px;
   aspect-ratio: 6;
   display: flex;
 }
-.loader:before,
-.loader:after {
+.dot-cut-rotate-loader:before,
+.dot-cut-rotate-loader:after {
   content: "";
   flex: 1;
   padding-left: calc(100% / 6);
@@ -16,7 +16,7 @@
     0/75% 100% content-box;
   animation: l20 1.3s infinite;
 }
-.loader:after {
+.dot-cut-rotate-loader:after {
   --_s: -1;
 }
 @keyframes l20 {

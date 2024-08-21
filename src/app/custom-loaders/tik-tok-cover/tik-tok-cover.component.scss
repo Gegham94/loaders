@@ -1,11 +1,11 @@
-.loader {
+.tik-tok-loader {
   width: 30px;
   height: 30px;
   position: relative;
 }
 
-.loader::before,
-.loader::after {
+.tik-tok-loader::before,
+.tik-tok-loader::after {
   content: "";
   position: absolute;
   width: inherit;
@@ -15,12 +15,12 @@
   animation: rotate 1.5s infinite cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.loader::before {
+.tik-tok-loader::before {
   background-color: #fe2f97;
   animation-name: rotate-pink;
 }
 
-.loader::after {
+.tik-tok-loader::after {
   background-color: #13c7d4;
   animation-name: rotate-blue;
 }
@@ -59,28 +59,4 @@
     transform: scale(0.3);
     z-index: 0;
   }
-}
-
-
-
-
-/* HTML: <div class="loader"></div> */
-.loader {
-  height: 40px;
-  aspect-ratio: 1.5;
-  --c:no-repeat linear-gradient(#fff 0 0);
-  background: var(--c), var(--c), var(--c), var(--c);
-  background-size: 33.4% 50%;
-  animation: l6 2s infinite linear;
-}
-@keyframes l6 {
-  0%    {background-position:0 0,50% 0,0 100%,50% 100%}
-  12.5% {background-position:0 0,100% 0,0 100%,50% 100%}
-  25%   {background-position:0 0,100% 0,0 100%,50% 0}
-  37.5% {background-position:0 0,100% 0,50% 100%,50% 0}
-  50%   {background-position:0 100%,100% 0,50% 100%,50% 0}
-  62.5% {background-position:0 100%,100% 0,50% 100%,0 0}
-  75%   {background-position:0 100%,100% 100%,50% 100%,0 0}
-  87.5% {background-position:0 100%,100% 100%,50% 0,0 0}
-  100%  {background-position:0 100%,50% 100%,50% 0,0 0}
 }

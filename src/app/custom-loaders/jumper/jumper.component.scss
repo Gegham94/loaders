@@ -1,4 +1,4 @@
-.loader {
+.jumper-loader {
   width: 40px;
   height: 20px;
   --c:no-repeat radial-gradient(farthest-side,#e1a52f 93%,#e1a52f);
@@ -10,7 +10,7 @@
   position: relative;
   animation: l4-0 1s linear infinite alternate;
 }
-.loader:before {
+.jumper-loader:before {
   content: "";
   position: absolute;
   width: 14px;

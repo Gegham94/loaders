@@ -1,4 +1,4 @@
-.loader {
+.cube-flip-loader {
   width: 60px;
   aspect-ratio: 1;
   color: #e1a52f;
@@ -9,8 +9,8 @@
   background-repeat: no-repeat;
   animation:  l7-0 0.8s infinite steps(1);
 }
-.loader::before,
-.loader::after {
+.cube-flip-loader::before,
+.cube-flip-loader::after {
   content:"";
   position: absolute;
   inset: 0 50% 50% 0;
@@ -19,7 +19,7 @@
   transform-origin: bottom right; 
   animation: l7-1 .4s infinite linear alternate;
 }
-.loader::after {
+.cube-flip-loader::after {
   --s:-1,-1;
 }
 @keyframes l7-0 {

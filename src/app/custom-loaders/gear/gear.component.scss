@@ -1,4 +1,4 @@
-.loader {
+.gear-loader {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -39,6 +39,12 @@
     font-weight: 600;
     white-space: nowrap;
   }
+  .clippath-big {
+    animation: spin 2000ms linear infinite;
+  }
+  .clippath-small {
+    animation: spin-revers 2000ms linear infinite;
+  }
 }
 
 @keyframes spin {
@@ -56,11 +62,4 @@
   to{
     transform: rotate(0deg);
   }
-}
-
-.clippath-big {
-  animation: spin 2000ms linear infinite;
-}
-.clippath-small {
-  animation: spin-revers 2000ms linear infinite;
 }

@@ -1,4 +1,4 @@
-.loader {
+.dot-load-loader {
   width: 90px;
   height: 23px;
   border-radius: 40px;
@@ -7,7 +7,7 @@
   position: relative;
   overflow: hidden;
 }
-.loader::before {
+.dot-load-loader::before {
   content: "";
   position: absolute;
   margin: 2px;
