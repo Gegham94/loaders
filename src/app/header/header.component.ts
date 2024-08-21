@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, QueryList, ViewChildren } from '@angular/core';
+import { Component, HostListener, QueryList, ViewChildren } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { DeviceDetectorService } from 'ngx-device-detector';
@@ -21,7 +21,7 @@ export class HeaderComponent {
     { id: 0, title: 'Diamond', value: 'diamond' },
     { id: 1, title: 'Gear', value: 'gear' },
     { id: 2, title: 'Mario', value: 'mario' },
-    { id: 3, title: 'Loop', value: 'dot_loop' },
+    { id: 3, title: 'Dot Loop', value: 'dot_loop' },
     { id: 4, title: 'Dash Loop', value: 'dash_loop' },
     { id: 5, title: 'Blob Loop', value: 'blob_loop' },
     { id: 6, title: 'Circule Way', value: 'circule_way' },
@@ -57,6 +57,11 @@ export class HeaderComponent {
   ngOnInit() {
     this.isMobile = this.deviceService.deviceType === 'mobile' ? true : false;
     this.router.navigate(['diamond']);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMobile = event.target.innerWidth < 768;
   }
 
   setActive(id: number) {

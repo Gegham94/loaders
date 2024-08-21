@@ -1,20 +1,30 @@
-.falling-blocks-loader {
+.loader {
   width: 50px;
   height: 50px;
-  --g1:conic-gradient(from  90deg at left 2px top 2px, transparent 90deg,#e1a52f 0);
-  --g2:conic-gradient(from -90deg at bottom 2px right 2px, transparent 90deg,#e1a52f 0);
-  background: var(--g1),var(--g1),var(--g1), var(--g2),var(--g2),var(--g2);
-  background-position: left,center,right;
+  --g1: conic-gradient(from 90deg, #e1a52f 90deg, #e1a52f);
+  --g2: conic-gradient(from -90deg, #e1a52f 90deg, #e1a52f);
+  background: var(--g1), var(--g1), var(--g1), var(--g2), var(--g2), var(--g2);
+  background-position: left, center, right;
   background-repeat: no-repeat;
   animation: l10 1s infinite alternate;
 }
 @keyframes l10 {
-  0%,
-  2%   {background-size:15px 50% ,15px 50% ,15px 50%}
-  20%  {background-size:15px 25% ,15px 50% ,15px 50%}
-  40%  {background-size:15px 100%,15px 25% ,15px 50%}
-  60%  {background-size:15px 50% ,15px 100%,15px 25%}
-  80%  {background-size:15px 50% ,15px 50% ,15px 100%}
-  98%,
-  100% {background-size:15px 50% ,15px 50% ,15px 50%}
+  0% {
+    background-size: 14px 50%, 14px 50%, 14px 50%;
+  }
+  20% {
+    background-size: 14px 25%, 14px 50%, 14px 50%;
+  }
+  40% {
+    background-size: 14px 100%, 14px 25%, 14px 50%;
+  }
+  60% {
+    background-size: 14px 50%, 14px 100%, 14px 25%;
+  }
+  80% {
+    background-size: 14px 50%, 14px 50%, 14px 100%;
+  }
+  100% {
+    background-size: 14px 50%, 14px 50%, 14px 50%;
+  }
 }

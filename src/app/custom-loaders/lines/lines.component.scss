@@ -1,11 +1,11 @@
-.lines-loader {
+.loader {
   width: 60px;
   height: 20px;
   display: grid;
   color: #046D8B;
 }
-.lines-loader:before,
-.lines-loader:after {
+.loader:before,
+.loader:after {
   content: "";
   grid-area: 1/1;
   --c:#0000 calc(100%/3),#e1a52f 0 calc(2*100%/3),#0000 0;
@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   animation: l15 1.5s infinite;
 }
-.lines-loader:after {
+.loader:after {
   animation-delay: -.75s;
 }
 @keyframes l15 {

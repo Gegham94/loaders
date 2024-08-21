@@ -1,4 +1,4 @@
-.ovals-flip-loader {
+.loader {
   width: 60px;
   height: 25px;
   border: 2px solid;
@@ -8,8 +8,8 @@
   animation: l2 1s infinite linear;
   color: #e1a52f;
 }
-.ovals-flip-loader:before,
-.ovals-flip-loader:after {
+.loader:before,
+.loader:after {
   content: "";
   grid-area: 1/1;
   border: inherit;
@@ -17,7 +17,7 @@
   animation: inherit;
   animation-duration: 3s;
 }
-.ovals-flip-loader:after {
+.loader:after {
   --s:-1;
 }
 @keyframes l2 {

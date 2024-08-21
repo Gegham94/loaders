@@ -1,4 +1,4 @@
-.triangle-star-loader {
+.loader {
   width: 50px;
   aspect-ratio: 1.154;
   display: grid;
@@ -11,15 +11,15 @@
   transform-origin: 50% 66%;
   animation: l5 3s infinite linear;
 }
-.triangle-star-loader::before,
-.triangle-star-loader::after {
+.loader::before,
+.loader::after {
   content: "";
   grid-area: 1/1;
   background: inherit;
   transform-origin: inherit;
   animation: inherit;
 }
-.triangle-star-loader::after {
+.loader::after {
   animation-duration: 1.5s;
 }
 @keyframes l5{

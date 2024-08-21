@@ -1,4 +1,4 @@
-.mario-loader {
+.loader {
   width: fit-content;
   font-size: 17px;
   font-family: monospace;
@@ -10,13 +10,13 @@
   overflow: hidden;
   animation: l10-0 1.3s infinite cubic-bezier(1,175,.5,175);
 }
-.mario-loader::before {
+.loader::before {
   content:"Loading";
   display:inline-block;
   animation: l10-2 1.3s infinite;
   color: #e1a52f;
 }
-.mario-loader::after {
+.loader::after {
   content:"";
   position: absolute;
   width: 34px;

@@ -1,12 +1,12 @@
-.blob-cube-loader {
+.loader {
   width: 40px;
   height: 20px;
   background: #e1a52f;
   position: relative;
   animation: l9-0 1s infinite linear;
 }
-.blob-cube-loader:before,
-.blob-cube-loader:after {
+.loader:before,
+.loader:after {
    content:"";
    position: absolute;
    background: inherit; 
@@ -16,12 +16,12 @@
    animation: inherit;
    animation-name: l9-1;
 }
-.blob-cube-loader:before {
+.loader:before {
   left: 0;
   transform-origin: bottom left;
   --s:-1;
 }
-.blob-cube-loader:after {
+.loader:after {
   right: 0;
   transform-origin: bottom right;
 }

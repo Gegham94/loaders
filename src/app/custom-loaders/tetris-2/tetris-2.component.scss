@@ -1,11 +1,11 @@
-.tetris-2-loader {
+.loader {
   width: 60px;
   height: 14px;
   box-shadow: 0 3px 0 #e1a52f;
   position: relative;
   clip-path: inset(-40px 0 -5px)
 }
-.tetris-2-loader:before {
+.loader:before {
   content: "";
   position: absolute;
   inset: auto calc(50% - 16px) 0;

@@ -1,4 +1,4 @@
-.dots-flip-loader {
+.loader {
   width: 70px;
   aspect-ratio: 1;
   background:
@@ -8,7 +8,7 @@
   animation: l17 1s infinite linear;
   position: relative;
 }
-.dots-flip-loader::before {    
+.loader::before {    
   content:"";
   position: absolute;
   width: 8px;

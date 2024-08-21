@@ -1,11 +1,11 @@
-.tiktok-loader {
+.loader {
   width: 30px;
   height: 30px;
   position: relative;
 }
 
-.tiktok-loader::before,
-.tiktok-loader::after {
+.loader::before,
+.loader::after {
   content: "";
   position: absolute;
   width: inherit;
@@ -15,12 +15,12 @@
   animation: rotate 1.5s infinite cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.tiktok-loader::before {
+.loader::before {
   background-color: #fe2f97;
   animation-name: rotate-pink;
 }
 
-.tiktok-loader::after {
+.loader::after {
   background-color: #13c7d4;
   animation-name: rotate-blue;
 }

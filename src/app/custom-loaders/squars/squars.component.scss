@@ -1,10 +1,10 @@
-.squar-loader {
+.loader {
   width: 40px;
   aspect-ratio: 1;
   display: grid;
 }
-.squar-loader::before,
-.squar-loader::after {
+.loader::before,
+.loader::after {
   content: "";
   grid-area: 1/1;
   --c:no-repeat linear-gradient(#e1a52f 0 0);
@@ -18,7 +18,7 @@
     l10-1 1.5s infinite linear,
     l10-2 1.5s infinite linear;
 }
-.squar-loader::after {
+.loader::after {
   margin: 25%;
   transform: scale(-1);
 }
