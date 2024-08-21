@@ -16,11 +16,13 @@
   bottom: 0;
   left: -20px;
   border-radius: inherit;
-  background: #f03355 ;
-  box-shadow: -10px 0 12px 3px #f03355 ;
-  clip-path: polygon(0 5%, 100% 0,100% 100%,0 95%,-30px 50%);
+  background: #f03355;
+  box-shadow: -10px 0 12px 3px #f03355;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%, -30px 50%);
   animation: l14 0.7s infinite linear;
 }
 @keyframes l14 {
-  100% {left: calc(100% + 20px)}
+  100% {
+    left: calc(100% + 20px);
+  }
 }
