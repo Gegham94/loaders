@@ -1,9 +1,9 @@
 .blob-cube-loader {
-  width: 40px;
-  height: 20px;
+  width: 30px;
+  height: 15px;
   background: #e1a52f;
   position: relative;
-  animation: l9-0 1s infinite linear;
+  animation: l9-0 0.8s infinite linear;
   &:before,
   &:after {
      content:"";

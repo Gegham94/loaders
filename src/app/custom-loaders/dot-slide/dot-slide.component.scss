@@ -3,12 +3,12 @@
   aspect-ratio: 1;
   border-radius: 50%;
   clip-path: inset(-45px);
-  box-shadow: -60px 15px #f03355, -60px 15px #f03355, -60px 15px #f03355;
+  box-shadow: -60px 15px #e1a52f, -60px 15px #e1a52f, -60px 15px #e1a52f;
   animation: l19 1s infinite linear;
 }
 @keyframes l19 {
   16.67% {
-    box-shadow: -60px 15px #f03355, -60px 15px #f03355, 19px 15px #f03355;
+    box-shadow: -60px 15px #e1a52f, -60px 15px #e1a52f, 19px 15px #e1a52f;
   }
   33.33% {
     box-shadow: -60px 15px #e1a52f, 0px 15px #e1a52f, 19px 15px #e1a52f;
@@ -24,6 +24,6 @@
     box-shadow: -19px 15px #e1a52f, 60px 15px #e1a52f, 60px 15px #e1a52f;
   }
   100% {
-    box-shadow: 60px 15px #f03355, 60px 15px #f03355, 60px 15px #f03355;
+    box-shadow: 60px 15px #e1a52f, 60px 15px #e1a52f, 60px 15px #e1a52f;
   }
 }

@@ -10,7 +10,7 @@
     inset: auto calc(50% - 16px) 0;
     height: 50px;
     --g: no-repeat linear-gradient(#e1a52f 0 0);
-    --g2: no-repeat linear-gradient(#f03355 0 0);
+    --g2: no-repeat linear-gradient(#e1a52f 0 0);
     background: var(--g), var(--g2), var(--g2), var(--g);
     background-size: 15px 13px;
     animation: l7-1 1.2s infinite linear, l7-2 1.2s infinite linear;

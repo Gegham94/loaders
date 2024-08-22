@@ -1,8 +1,8 @@
 .time-loader {
-  --c1: #f03355;
+  --c1: #e1a52f;
   --c2: #e1a52f;
-  width: 40px;
-  height: 80px;
+  width: 30px;
+  height: 60px;
   border-top: 4px solid var(--c1);
   border-bottom: 4px solid var(--c1);
   background: linear-gradient(
@@ -19,7 +19,7 @@
   &::after {
     content: "";
     grid-area: 1/1;
-    width: 75%;
+    width: 80%;
     height: calc(50% - 4px);
     margin: 0 auto;
     border: 2px solid var(--c1);

@@ -7,7 +7,7 @@
     content: "";
     grid-area: 1/1;
     --c: no-repeat linear-gradient(#e1a52f 0 0);
-    --c2: no-repeat linear-gradient(#f03355 0 0);
+    --c2: no-repeat linear-gradient(#e1a52f 0 0);
     background: var(--c) 0 0, var(--c2) 100% 0, var(--c) 100% 100%,
       var(--c) 0 100%;
     animation: l10-1 1.5s infinite linear, l10-2 1.5s infinite linear;
