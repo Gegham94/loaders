@@ -5,15 +5,15 @@
   font-size: 22px;
   background: radial-gradient(circle closest-side,#e1a52f 94%, transparent) right/calc(200% - 1em) 100%;
   animation: l24 0.8s infinite alternate linear;
-}
-.loading-loader::before {
-  content: "Loading...";
-  line-height: 1.2em;
-  color: transparent;
-  background: inherit;
-  background-image: radial-gradient(circle closest-side,#000 94%,#e1a52f);
-  background-clip:text;
-  -webkit-background-clip:text;
+  &::before {
+    content: "Loading...";
+    line-height: 1.2em;
+    color: transparent;
+    background: inherit;
+    background-image: radial-gradient(circle closest-side,#000 94%,#e1a52f);
+    background-clip:text;
+    -webkit-background-clip:text;
+  }
 }
 
 @keyframes l24{

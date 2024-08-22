@@ -2,27 +2,24 @@
   width: 30px;
   height: 30px;
   position: relative;
-}
-
-.tik-tok-loader::before,
-.tik-tok-loader::after {
-  content: "";
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  border-radius: 50%;
-  border: 2px solid rgba(181, 181, 181, 0.7);
-  animation: rotate 1.5s infinite cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.tik-tok-loader::before {
-  background-color: #fe2f97;
-  animation-name: rotate-pink;
-}
-
-.tik-tok-loader::after {
-  background-color: #13c7d4;
-  animation-name: rotate-blue;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    border: 2px solid rgba(181, 181, 181, 0.7);
+    animation: rotate 1.5s infinite cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  &::before {
+    background-color: #fe2f97;
+    animation-name: rotate-pink;
+  }
+  &::after {
+    background-color: #13c7d4;
+    animation-name: rotate-blue;
+  }
 }
 
 @keyframes rotate-pink {
@@ -42,7 +39,6 @@
     z-index: 1;
   }
 }
-
 @keyframes rotate-blue {
   0%,
   100% {

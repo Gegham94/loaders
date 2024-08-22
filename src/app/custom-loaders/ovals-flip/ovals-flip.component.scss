@@ -7,18 +7,18 @@
   display: grid;
   animation: l2 1s infinite linear;
   color: #e1a52f;
-}
-.ovals-flip-loader:before,
-.ovals-flip-loader:after {
-  content: "";
-  grid-area: 1/1;
-  border: inherit;
-  border-radius: 50%;
-  animation: inherit;
-  animation-duration: 3s;
-}
-.ovals-flip-loader:after {
-  --s:-1;
+  &::before,
+  &::after {
+    content: "";
+    grid-area: 1/1;
+    border: inherit;
+    border-radius: 50%;
+    animation: inherit;
+    animation-duration: 3s;
+  }
+  &::after {
+    --s:-1;
+  }
 }
 @keyframes l2 {
    100% {transform:rotate(calc(var(--s,1)*1turn))}

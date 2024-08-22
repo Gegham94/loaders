@@ -5,19 +5,19 @@
   background: #e1a52f;
   display: grid;
   animation: l22-0 2s infinite linear;
-}
-.dot-rotate-loader:before,
-.dot-rotate-loader:after {
-  content: "";
-  grid-area: 1/1;
-  margin: 15%;
-  border-radius: 50%;
-  background: inherit;
-  transform: rotate(0deg) translate(150%);
-  animation: l22 1s infinite;
-}
-.dot-rotate-loader:after {
-  animation-delay: -.5s
+  &:before,
+  &:after {
+    content: "";
+    grid-area: 1/1;
+    margin: 15%;
+    border-radius: 50%;
+    background: inherit;
+    transform: rotate(0deg) translate(150%);
+    animation: l22 1s infinite;
+  }
+  &:after {
+    animation-delay: -.5s
+  }
 }
 @keyframes l22-0 {
   100% {transform: rotate(1turn)}

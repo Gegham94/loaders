@@ -10,17 +10,17 @@
   background-repeat: no-repeat;
   transform-origin: 50% 66%;
   animation: l5 3s infinite linear;
-}
-.triangle-star-loader::before,
-.triangle-star-loader::after {
-  content: "";
-  grid-area: 1/1;
-  background: inherit;
-  transform-origin: inherit;
-  animation: inherit;
-}
-.triangle-star-loader::after {
-  animation-duration: 1.5s;
+  &::before,
+  &::after {
+    content: "";
+    grid-area: 1/1;
+    background: inherit;
+    transform-origin: inherit;
+    animation: inherit;
+  }
+  &::after {
+    animation-duration: 1.5s;
+  }
 }
 @keyframes l5{
   100% {transform:rotate(1turn)}
