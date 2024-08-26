@@ -36,6 +36,7 @@ export class HeaderComponent {
     { id: 15, title: 'Dot Cut Rotate', value: 'dot_cut_rotate' },
     { id: 16, title: 'Dot Rotate', value: 'dot_rotate' },
     { id: 17, title: 'Dot Swell Up', value: 'dot_swell_up' },
+    { id: 17, title: 'Blob Rotate', value: 'blob_rotate' },
     { id: 18, title: 'Tik Tok', value: 'tik_tok' },
     { id: 19, title: 'Tetris', value: 'tetris' },
     { id: 20, title: 'Tetris 2', value: 'tetris_2' },

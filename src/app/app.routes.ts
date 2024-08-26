@@ -28,6 +28,7 @@ import { DotCutComponent } from './custom-loaders/dot-cut/dot-cut.component';
 import { DotCutRotateComponent } from './custom-loaders/dot-cut-rotate/dot-cut-rotate.component';
 import { DotRotateComponent } from './custom-loaders/dot-rotate/dot-rotate.component';
 import { DotSwellUpComponent } from './custom-loaders/dot-swell-up/dot-swell-up.component';
+import { BlobRotateComponent } from './custom-loaders/blob-rotate/blob-rotate.component';
 
 export const routes: Routes = [
   {
@@ -149,6 +150,10 @@ export const routes: Routes = [
   {
     path: 'dot_swell_up',
     component: DotSwellUpComponent,
+  },
+  {
+    path: 'blob_rotate',
+    component: BlobRotateComponent,
   },
   { path: '**', redirectTo: 'diamond' },
 ];
